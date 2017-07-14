@@ -1,6 +1,7 @@
 # Hangman
 
-Project
+Project from Alura's course "Introdução a programação funcional"
+See: https://cursos.alura.com.br/course/introducao-a-programacao-funcional-com-clojure
 
 ## Usage
 
