@@ -15,12 +15,21 @@
 (defn match-whole-word? [word hits]
   (empty? (missing-letters word hits)))
 
+(defn user-input! [] (read-line))
+
+(defn match? [input word] (.contains word input))
+
+(defn check-input [input lifes word hits]
+  (if (match? input word)
+    (game lifes word (conj hits input))
+    (game (dec lifes) word hits)))
+
 (defn game [lifes word hits]
   (if (= lifes 0)
     (lose-game)
     (if (match-whole-word? word hits)
       (win-game)
-      (print "Try again!"))))
+      (check-input (user-input!) lifes word hits))))
 
 (defn -main
   "I don't do a whole lot ... yet."
