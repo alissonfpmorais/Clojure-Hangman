@@ -1,0 +1,172 @@
+(+ 1 (* 5 (/ 10 2)))
+max-health
+(require '[forca.core :as forca] :reload)
+(forca/perdeu)
+(require '[forca.core :as forca] :reload)
+(forca/jogo)
+(forca/game)
+(forca/game 5)
+(require '[forca.core :as forca] :reload)
+(forca/game 5)
+(defn fib [n]
+  (if (= x 0)
+    0
+    (if (= x 1)
+      1
+      (+ (fib (- n 2)) (fib (- n 1))))))
+(defn fib [n]
+  (if (= n 0)
+    0
+    (if (= n 1)
+      1
+      (+ (fib (- n 2)) (fib (- n 1))))))
+(forca/fib 4)
+5
+6
+7
+(forca/fib 5)
+(forca/fib 6)
+(forca/fib 7)
+(require '[forca.core :as forca] :reload)
+(forca/game 0 "MELANCIA" #{"M", "A"})
+(forca/game 1 "MELANCIA" #{"M", "A"})
+(require '[forca.core :as forca] :reload)
+(forca/game 1 "MELANCIA" #{"M", "A"})
+(require '[forca.core :as forca] :reload)
+(forca/missing-letters "MELANCIA" #{"M", "A"})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{"M", "A"})
+(forca/game 5 "MELANCIA" #{"M", "E", "L", "A", "N", "C", "I"})
+(forca/game 0 "MELANCIA" #{"M", "E", "L", "A", "N", "C", "I"})
+(forca/game 5 "MELANCIA" #{"M", "E", "L", "A", "N", "C", "I"})
+(def numeros #{1, 2, 3, 4, 5})
+(def carros #{50000.0, 60000.0})
+carros
+numeros
+(remove (fn [num] (= 1 (rem num 2))) numeros)
+(defn triplica [x] (* x 3))
+(map triplica numeros)
+(defn edges [x] ((< x 2) or (> x 4)))
+(defn edges [x] (or (< x 2) (> x 4)))
+(filter edges numeros)
+(defn edges [x] (or (> x 2) (< x 4)))
+(filter edges numeros)
+(defn edges [x] (or (< x 2) (> x 4)))
+(filter edges numeros)
+(def palavra #{"A", "L", "U", "R"})
+(contains? palavra "A")
+(and (contains? palavra "A") (contains? palavra "O"))
+(and (contains? palavra "A") (contains? palavra "R"))
+(and (contains? palavra "A") (contains? palavra "O"))
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA")
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(defn crazy-letter [x] (* 7 (Integer/parseInt x))
+)
+(forca/user-input)
+(forca/user-input!)
+(crazy-letter forca/user-input!)
+(crazy-letter user-input!)
+(defn crazy-letter [x] (* 7 (Integer/parseInt (read-line)))
+)
+(defn crazy-letter [] (* 7 (Integer/parseInt (read-line))))
+(crazy-letter)
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(defn fib [n]
+(if (= n 0) 0
+(if (= n 1) 1
+(+ (recur (- x 1)) (recur (- x  2))))))
+(defn fib [n]
+  (loop [a 1 b 1 numero 2]
+    (if 
+      (= numero x) ???
+      (recur ? (+ ? ?) (inc ?)))))
+(defn fib[x]
+    (loop [a 1 b 1 numero 2]
+        (if 
+            (= numero x) b
+            (recur b (+ a b) (inc numero)))))
+(fib 0)
+(fib 1)
+(fib 2)
+(fib 3)
+(fib 4)
+(fib 5)
+(fib 6)
+(def sum-series [n]
+  (loop [res 1 acc 1]
+    (if
+      (= acc n) res
+      (recur (+ acc res) (inc acc)))))
+(defn sum-series [n]
+  (loop [res 1 acc 1]
+    (if
+      (= acc n) res
+      (recur (+ acc res) (inc acc)))))
+(sum-series 5)
+(sum-series 4)
+(defn sum-series [n]
+  (loop [res 1 acc 1]
+    (if
+      (= acc n) (+ acc res)
+      (recur (+ acc res) (inc acc)))))
+(sum-series 4)
+(sum-series 5)
+(defn sum-series [n]
+  (loop [res 1 acc 1]
+    (if
+      (= acc n) res
+      (do
+        (inc acc)
+        (recur (+ acc res) acc)))))
+(sum-series 5)
+(forca/game 5 "MELANCIA" #{})
+game
+(game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+exit
+(forca/game 5 "MELANCIA" #{})
+exit
+(forca/game 5 "MELANCIA" #{})
+ls
+max-health
+(require 'forca.core)
+(in-ns 'forca.core)
+max-health
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+exit
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(defn mult [x, fixo] (* x fixo))
+(def nums [1, 2, 3, 4])
+(map (mult 2) nums)
+(map #(mult % 2) nums)
+(defn subt [x, fixo] (- x fixo))
+(map #(subt % 2) nums)
+(map #(subt 2 %) nums)
+(def carros [50000.0, 60000.0])
+(->> carros (map (fn [x] (* x 2)))
+)
+(defn subt [x] (- x 200))
+(defn mult [x] (* x 2))
+(map subt (map mult carros))
+(->> carros
+  (map mult)
+  (map subt))
+(defn mult2 [x] (* x 2))
+(defn mult3 [x] (* x 3))
+(defn total [x, y] (+ x y))
+(->> carros (map mult2) (map mult3) (reduce total))
+exit
