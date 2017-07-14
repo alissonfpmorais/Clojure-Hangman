@@ -3,14 +3,24 @@
 
 (def max-health 6)
 
-(defn end-game [] (print "You lose!"))
+(defn lose-game [] (print "You lose!"))
 
-(defn game [lifes]
+(defn win-game [] (print "You win!"))
+
+(defn missing-letters [word hits]
+  (remove
+    (fn [letter] (contains? hits (str letter)))
+    word))
+
+(defn match-whole-word? [word hits]
+  (empty? (missing-letters word hits)))
+
+(defn game [lifes word hits]
   (if (= lifes 0)
-    (end-game)
-    (do
-      (print lifes)
-      (game (dec lifes)))))
+    (lose-game)
+    (if (match-whole-word? word hits)
+      (win-game)
+      (print "Try again!"))))
 
 (defn -main
   "I don't do a whole lot ... yet."
