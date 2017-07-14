@@ -19,7 +19,16 @@
 
 (defn match? [input word] (.contains word input))
 
+(defn print-hangman [lifes word hits]
+  (println "Lifes " lifes)
+  (doseq [letter (seq word)]
+      (if (contains? hits (str letter))
+        (print letter " ")
+        (print "_" " ")))
+  (println))
+
 (defn game [lifes word hits]
+  (print-hangman lifes word hits)
   (cond
     (= lifes 0) (lose-game)
     (match-whole-word? word hits) (win-game)

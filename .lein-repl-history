@@ -129,3 +129,23 @@ numeros
         (inc acc)
         (recur (+ acc res) acc)))))
 (sum-series 5)
+(forca/game 5 "MELANCIA" #{})
+game
+(game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+exit
+(forca/game 5 "MELANCIA" #{})
+exit
+(forca/game 5 "MELANCIA" #{})
+ls
+max-health
+(require 'forca.core)
+(in-ns 'forca.core)
+max-health
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+exit
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
