@@ -19,17 +19,25 @@
 
 (defn match? [input word] (.contains word input))
 
-(defn check-input [input lifes word hits]
-  (if (match? input word)
-    (game lifes word (conj hits input))
-    (game (dec lifes) word hits)))
-
 (defn game [lifes word hits]
-  (if (= lifes 0)
-    (lose-game)
-    (if (match-whole-word? word hits)
-      (win-game)
-      (check-input (user-input!) lifes word hits))))
+  (cond
+    (= lifes 0) (lose-game)
+    (match-whole-word? word hits) (win-game)
+    :else
+    (let [input (user-input!)]
+      (if (match? input word)
+        (do
+          (println "Match a letter!")
+          (recur lifes word (conj hits input)))
+        (do
+          (println "Sorry, wrong letter! You lose 1 life!")
+          (recur (dec lifes) word hits))))))
+
+(defn sum-series [n]
+  (loop [res 0 acc 1]
+    (if
+      (= (- acc 1) n) res
+      (recur (+ acc res) (inc acc)))))
 
 (defn -main
   "I don't do a whole lot ... yet."

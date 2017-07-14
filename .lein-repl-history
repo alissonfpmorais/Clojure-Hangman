@@ -73,3 +73,59 @@ numeros
 )
 (defn crazy-letter [] (* 7 (Integer/parseInt (read-line))))
 (crazy-letter)
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(require '[forca.core :as forca] :reload)
+(forca/game 5 "MELANCIA" #{})
+(defn fib [n]
+(if (= n 0) 0
+(if (= n 1) 1
+(+ (recur (- x 1)) (recur (- x  2))))))
+(defn fib [n]
+  (loop [a 1 b 1 numero 2]
+    (if 
+      (= numero x) ???
+      (recur ? (+ ? ?) (inc ?)))))
+(defn fib[x]
+    (loop [a 1 b 1 numero 2]
+        (if 
+            (= numero x) b
+            (recur b (+ a b) (inc numero)))))
+(fib 0)
+(fib 1)
+(fib 2)
+(fib 3)
+(fib 4)
+(fib 5)
+(fib 6)
+(def sum-series [n]
+  (loop [res 1 acc 1]
+    (if
+      (= acc n) res
+      (recur (+ acc res) (inc acc)))))
+(defn sum-series [n]
+  (loop [res 1 acc 1]
+    (if
+      (= acc n) res
+      (recur (+ acc res) (inc acc)))))
+(sum-series 5)
+(sum-series 4)
+(defn sum-series [n]
+  (loop [res 1 acc 1]
+    (if
+      (= acc n) (+ acc res)
+      (recur (+ acc res) (inc acc)))))
+(sum-series 4)
+(sum-series 5)
+(defn sum-series [n]
+  (loop [res 1 acc 1]
+    (if
+      (= acc n) res
+      (do
+        (inc acc)
+        (recur (+ acc res) acc)))))
+(sum-series 5)
