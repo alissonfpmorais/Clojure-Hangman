@@ -5,4 +5,4 @@ See: https://cursos.alura.com.br/course/introducao-a-programacao-funcional-com-c
 
 ## Usage
 
-$ java -jar forca-0.1.0-standalone.jar
+$ java -jar forca-0.1.0-SNAPSHOT-standalone.jar
