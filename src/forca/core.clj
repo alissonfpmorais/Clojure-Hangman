@@ -33,12 +33,6 @@
           (println "Sorry, wrong letter! You lose 1 life!")
           (recur (dec lifes) word hits))))))
 
-(defn sum-series [n]
-  (loop [res 0 acc 1]
-    (if
-      (= (- acc 1) n) res
-      (recur (+ acc res) (inc acc)))))
-
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
