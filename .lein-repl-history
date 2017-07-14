@@ -1,0 +1,29 @@
+(+ 1 (* 5 (/ 10 2)))
+max-health
+(require '[forca.core :as forca] :reload)
+(forca/perdeu)
+(require '[forca.core :as forca] :reload)
+(forca/jogo)
+(forca/game)
+(forca/game 5)
+(require '[forca.core :as forca] :reload)
+(forca/game 5)
+(defn fib [n]
+  (if (= x 0)
+    0
+    (if (= x 1)
+      1
+      (+ (fib (- n 2)) (fib (- n 1))))))
+(defn fib [n]
+  (if (= n 0)
+    0
+    (if (= n 1)
+      1
+      (+ (fib (- n 2)) (fib (- n 1))))))
+(forca/fib 4)
+5
+6
+7
+(forca/fib 5)
+(forca/fib 6)
+(forca/fib 7)
