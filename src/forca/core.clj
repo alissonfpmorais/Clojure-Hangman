@@ -1,7 +1,9 @@
 (ns forca.core
   (:gen-class))
 
-(def max-health 6)
+(def max-lifes 6)
+
+(def secret-word "PINEAPPLE")
 
 (defn lose-game [] (print "You lose!"))
 
@@ -42,7 +44,8 @@
           (println "Sorry, wrong letter! You lose 1 life!")
           (recur (dec lifes) word hits))))))
 
+(defn start-game [] (game max-lifes secret-word #{}))
+
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (start-game))
